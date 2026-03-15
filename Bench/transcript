@@ -1,0 +1,11 @@
+# vsim work.testSystem 
+# Start time: 05:20:35 on Mar 15,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testsystem(test1)
+# Loading work.system(struct)
+# Loading work.robot(robot_behavior)
+# Loading work.count(impl)
+add wave *
+run 200 ns
