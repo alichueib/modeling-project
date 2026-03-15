@@ -34,33 +34,33 @@ begin
     --4: Rest time Exceeded (reached rest thr)
 
     --senario one:
-    -- This is just a random sequence, to test if stimulation is working: It is!
+    -- successfull retrieval of food (ideal scenario/ Just go to the next state until u reach resting again):
     process
     begin
-        wait for 60 ns;
+        wait for 50 ns; -- this includes 10 for ensure changing the state from idle to Resting + 40 to finish resting
+
+        --now here we should be at 'randomwalk' state
         findfood1 <= '1';
         wait for 10 ns;
-        findfood1 <= '0';
 
-        wait for 20 ns;
+        --here at 'movetofood':
         closetofood1 <= '1';
         wait for 10 ns;
-        closetofood1 <= '0';
 
-        wait for 20 ns;
+
+        --here at grabfood:
         success1 <= '1';
         wait for 10 ns;
-        success1 <= '0';
 
-        wait for 20 ns;
+        --here at movetohome:
         athome1 <= '1';
         wait for 10 ns;
-        athome1 <= '0';
 
-        wait for 20 ns;
+        --here at deposit:
         success1 <= '1';
         wait for 10 ns;
         success1 <= '0';
+
     end process;
 
 

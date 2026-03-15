@@ -1,5 +1,6 @@
+# ERROR: No extended dataflow license exists
 # vsim work.testSystem 
-# Start time: 05:20:35 on Mar 15,2026
+# Start time: 13:21:51 on Mar 15,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -8,4 +9,14 @@
 # Loading work.robot(robot_behavior)
 # Loading work.count(impl)
 add wave *
-run 200 ns
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: alichueib  Hostname: alichueib-LOQ-15IAX9E  ProcessID: 60944
+#           Attempting to use alternate WLF file "./wlftAJNUmC".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftAJNUmC
+run 120 ns
