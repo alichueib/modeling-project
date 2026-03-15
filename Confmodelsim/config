@@ -2,5 +2,5 @@
 #export MODELSIM=$HOME/projet_asic/Project/Confmodelsim/modelsim.ini
 
 #For my local machine, this is the correct path:
-
+export MODELSIM=$HOME/MOSIG/S8/Modeling/Lab2/home/Project/Confmodelsim/modelsim.ini
 
