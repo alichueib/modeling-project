@@ -1,6 +1,6 @@
 # ERROR: No extended dataflow license exists
 # vsim work.testSystem 
-# Start time: 13:21:51 on Mar 15,2026
+# Start time: 16:08:23 on Mar 15,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -8,7 +8,21 @@
 # Loading work.system(struct)
 # Loading work.robot(robot_behavior)
 # Loading work.count(impl)
-add wave *
+vsim work.testconfig
+# End time: 16:09:11 on Mar 15,2026, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 0
+# vsim work.testconfig 
+# Start time: 16:09:11 on Mar 15,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testconfig
+# Loading work.testsystem(test1)
+# Loading work.system(struct)
+# Loading work.robot(robot_behavior)
+# Loading work.count(impl)
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/testsystem/*
 # Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
 # Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
 # Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
@@ -16,7 +30,21 @@ add wave *
 #           errno 11: Resource temporarily unavailable.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: alichueib  Hostname: alichueib-LOQ-15IAX9E  ProcessID: 60944
-#           Attempting to use alternate WLF file "./wlftAJNUmC".
+#           Attempting to use alternate WLF file "./wlftnxdnQW".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftAJNUmC
-run 120 ns
+#           Using alternate file: ./wlftnxdnQW
+add wave -position insertpoint  \
+sim:/testsystem/S/R/reset \
+sim:/testsystem/S/R/clk \
+sim:/testsystem/S/R/findfood \
+sim:/testsystem/S/R/closetofood \
+sim:/testsystem/S/R/lostfood \
+sim:/testsystem/S/R/scantimeup \
+sim:/testsystem/S/R/success \
+sim:/testsystem/S/R/athome \
+sim:/testsystem/S/R/aboverestth \
+sim:/testsystem/S/R/abovesearchth \
+sim:/testsystem/S/R/rest \
+sim:/testsystem/S/R/search \
+sim:/testsystem/S/R/food
+run 500 ns
