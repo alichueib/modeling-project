@@ -1,0 +1,6 @@
+#The below path is for university workplace:
+#export MODELSIM=$HOME/projet_asic/Project/Confmodelsim/modelsim.ini
+
+#For my local machine, this is the correct path:
+
+

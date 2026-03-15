@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/tp/xm1iarc/xm1iarc008/projet_asic/Project/Sources
+Cconfig1
+eSystem
+aStruct
+Z0 DEx4 work 5 count 0 22 n?JQVhZOKUo=@ZU4<3fE73
+Z1 DEx4 work 5 robot 0 22 _mGdE1Z?[N6?^MMVmdCP_0
+DAx4 work 6 system 6 struct 22 iIe>PDQVj0lobRX>Z4C[b2
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z4 DEx4 work 6 system 0 22 P[kJ4JeCfi4diIK3^=NM50
+!i122 13
+Z5 w1773544800
+Z6 d/home/alichueib/MOSIG/S8/Modeling/Lab2/home/Project/Sources
+Z7 8system.vhd
+Z8 Fsystem.vhd
+l0
+L55 1
+V;71c^Mc9=ccg7`aJgC6m71
+!s100 ]73Kk4VZlBP_:VG0L4E@O3
+Z9 OV;C;2020.1;71
+32
+Z10 !s110 1773544806
+!i10b 1
+Z11 !s108 1773544806.000000
+Z12 !s90 system.vhd|
+Z13 !s107 system.vhd|
+!i113 1
+Z14 tExplicit 1 CvgOpt 0
+Ecount
+Z15 w1773542442
+R2
+R3
+!i122 12
+R6
+Z16 8counter.vhd
+Z17 Fcounter.vhd
+l0
+L4 1
+Vn?JQVhZOKUo=@ZU4<3fE73
+!s100 <PcH4gL<@SE=M07CZBlli0
+R9
+32
+R10
+!i10b 1
+R11
+Z18 !s90 counter.vhd|
+Z19 !s107 counter.vhd|
+!i113 1
+R14
+Aimpl
+R2
+R3
+R0
+!i122 12
+l16
+L9 52
+Vm_OX>M^6PWbeC[]VhF:]o3
+!s100 QE80[D4VG5kg8@=0NeNgj3
+R9
+32
+R10
+!i10b 1
+R11
+R18
+R19
+!i113 1
+R14
+Erobot
+Z20 w1773542323
+R2
+R3
+!i122 11
+R6
+Z21 8robot.vhd
+Z22 Frobot.vhd
+l0
+L4 1
+V_mGdE1Z?[N6?^MMVmdCP_0
+!s100 <c<22@RjikU>lJl=GDT@Z2
+R9
+32
+R10
+!i10b 1
+R11
+Z23 !s90 robot.vhd|
+Z24 !s107 robot.vhd|
+!i113 1
+R14
+Arobot_behavior
+R2
+R3
+R1
+!i122 11
+l19
+L16 146
+VDg^VGkUgc]12Ug1@aGnH<2
+!s100 0Q7]BdncbC97J]On?o7Zc1
+R9
+32
+R10
+!i10b 1
+R11
+R23
+R24
+!i113 1
+R14
+Esystem
+R5
+R2
+R3
+!i122 13
+R6
+R7
+R8
+l0
+L4 1
+VP[kJ4JeCfi4diIK3^=NM50
+!s100 5NzKE6;ZiCz:3:EBJ`WX?0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+Astruct
+R2
+R3
+R4
+!i122 13
+l31
+Z25 L14 40
+Z26 ViIe>PDQVj0lobRX>Z4C[b2
+Z27 !s100 oTaBc;gz5mW9;<kgD8_>z1
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
