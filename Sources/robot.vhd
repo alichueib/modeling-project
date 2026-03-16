@@ -40,7 +40,7 @@ begin
         if abovesearchth = '1' then
           nextstate <= homing;
 
-        elsif findfood = '1' then
+        elsif abovesearchth = '0' and findfood = '1' then
           nextstate <= movetofood;
 
         else 
@@ -52,10 +52,10 @@ begin
         if abovesearchth = '1' then
           nextstate <= homing;
 
-        elsif lostfood = '1' then
+        elsif abovesearchth = '0' and lostfood = '1' then
           nextstate <= scanarena;
 
-        elsif closetofood = '1' then
+        elsif abovesearchth = '0' and lostfood = '0' and closetofood = '1' then
           nextstate <= grabfood;
 
         else
@@ -67,10 +67,10 @@ begin
         if abovesearchth = '1' then
           nextstate <= homing;
 
-        elsif findfood = '1' then
+        elsif abovesearchth = '0' and findfood = '1' then
           nextstate <= movetofood;
 
-        elsif scantimeup = '1' then
+        elsif abovesearchth = '0' and findfood = '0' and scantimeup = '1' then
           nextstate <= randomwalk;
           
         else

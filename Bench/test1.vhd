@@ -29,8 +29,8 @@ begin
     --NOTE: Scenario1 is good, but we can extend it with single state looping, to cover those scenarios!
     process
     begin
-        --scenario1: "testing successfull retreival of food"
-        
+        -- --scenario1: "testing successfull retreival of food"
+    
         -- --here we are at idle state:
         -- wait for 50 ns; -- this includes 10 for ensure changing the state from idle to Resting + 40 to finish resting
 
@@ -59,88 +59,92 @@ begin
         -- wait for 10 ns;
         -- success1 <= '0';
 
-        -- --Here we should be back to resting:
+        --Here we should be back to resting:
 
 
-        -- --senario 2: "Lets test rest threshold"
+        --senario 2: "Lets test Search threshold"
         
-        -- --testing1: "Reach threshold from randomwalk state"
-        -- wait for 50 ns; -- this includes 10 for ensure changing the state from idle to Resting + 40 to finish resting
+        --testing1: "Reach threshold from randomwalk state"
+        wait for 50 ns; -- this includes 10 for ensure changing the state from idle to Resting + 40 to finish resting
 
-        -- --now here we should be at 'randomwalk' state, so we will force the 10 cycles of search counters to finish, by waiting 100 ns,
-        -- wait for 100 ns;
+        --now here we should be at 'randomwalk' state, so we will force the 10 cycles of search counters to finish, by waiting 100 ns,
+        wait for 100 ns;
 
 
-        -- --now we should be at homing (as we reached thr)
-        -- athome1 <= '1';
-        -- wait for 10 ns;
-        -- athome1 <= '0';
+        --now we should be at homing (as we reached thr)
+        athome1 <= '1';
+        wait for 10 ns;
+        athome1 <= '0';
 
         
 
-        -- --testing2: "Reach threshold from movetofood state"
-        -- --now I should be in resting again:
-        -- wait for 40 ns; 
-
-        -- --now at randomwalk:
-        -- findfood1 <= '1';
-        -- wait for 10 ns; 
-        -- findfood1 <= '0';
-
-        -- --now at movetofood
-        -- wait for 90 ns; --waiting for more 9 cycles (to reach searchthr)
-
-        -- --now at homing
-        -- athome1 <= '1';
-        -- wait for 10 ns;
-        -- athome1 <= '0';
-
-        -- --testing2: "Reach threshold from scanarena state"
-        -- --now I should be in resting again:
-        -- wait for 40 ns; 
-
-        -- --now at randomwalk:
-        -- findfood1 <= '1';
-        -- wait for 10 ns; 
-        -- findfood1 <= '0';
-
-        -- --now at movefood:
-        -- lostfood1 <= '1';
-        -- wait for 10 ns;
-        -- lostfood1 <= '0';
-
-        -- --now at scanarena
-        -- wait for 80 ns; --more 8 cycles to reach thr
-
-        -- --now at resting again...
-
-
-        --scenario three: "testing the reset"
-        --idle:
-        wait for 50 ns; 
+        --testing2: "Reach threshold from movetofood state"
+        --now I should be in resting again:
+        wait for 40 ns; 
 
         --now at randomwalk:
         findfood1 <= '1';
         wait for 10 ns; 
-        --I will keep those set to see how everything will reset 
+        findfood1 <= '0';
+
+        --now at movetofood
+        wait for 90 ns; --waiting for more 9 cycles (to reach searchthr)
+
+        --now at homing
+        athome1 <= '1';
+        wait for 10 ns;
+        athome1 <= '0';
+
+        --testing2: "Reach threshold from scanarena state"
+        --now I should be in resting again:
+        wait for 40 ns; 
+
+        --now at randomwalk:
+        findfood1 <= '1';
+        wait for 10 ns; 
         findfood1 <= '0';
 
         --now at movefood:
         lostfood1 <= '1';
         wait for 10 ns;
-        --I will keep those set to see how everything will reset 
-        lostfood1 <= '0'; 
+        lostfood1 <= '0';
 
         --now at scanarena
-        reset1 <= '1';
+        wait for 80 ns; --more 8 cycles to reach thr
+
+        athome1 <= '1';
         wait for 10 ns;
-        reset1 <= '0';
+        athome1 <= '0';
+
+        --now at resting again...
 
 
-        --after this I should be at idle, with more 40 ns, I should be leaving resting to randomwalk
-        wait for 40 ns;
+        -- --scenario three: "testing the reset"
+        -- --idle:
+        -- wait for 50 ns; 
 
-        --Now I should be at randomwalk again!
+        -- --now at randomwalk:
+        -- findfood1 <= '1';
+        -- wait for 10 ns; 
+        -- --I will keep those set to see how everything will reset 
+        -- findfood1 <= '0';
+
+        -- --now at movefood:
+        -- lostfood1 <= '1';
+        -- wait for 10 ns;
+        -- --I will keep those set to see how everything will reset 
+        -- lostfood1 <= '0'; 
+
+        -- --now at scanarena
+        -- reset1 <= '1';
+        -- wait for 10 ns;
+        -- reset1 <= '0';
+
+
+        -- --after this I should be at idle, with more 40 ns, I should be leaving resting to randomwalk
+        -- wait for 40 ns;
+
+        -- --Now I should be at randomwalk again!
 
     end process;
 

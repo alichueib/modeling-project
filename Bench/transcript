@@ -1,6 +1,6 @@
 # ERROR: No extended dataflow license exists
 # vsim work.testSystem 
-# Start time: 16:51:07 on Mar 15,2026
+# Start time: 03:08:35 on Mar 16,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -9,10 +9,10 @@
 # Loading work.robot(robot_behavior)
 # Loading work.count(impl)
 vsim work.testconfig
-# End time: 16:51:16 on Mar 15,2026, Elapsed time: 0:00:09
+# End time: 03:08:43 on Mar 16,2026, Elapsed time: 0:00:08
 # Errors: 0, Warnings: 0
 # vsim work.testconfig 
-# Start time: 16:51:16 on Mar 15,2026
+# Start time: 03:08:43 on Mar 16,2026
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -39,12 +39,10 @@ sim:/testsystem/food1
 #           errno 11: Resource temporarily unavailable.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: alichueib  Hostname: alichueib-LOQ-15IAX9E  ProcessID: 60944
-#           Attempting to use alternate WLF file "./wlftCNLlYN".
+#           Attempting to use alternate WLF file "./wlftCveqxS".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftCNLlYN
+#           Using alternate file: ./wlftCveqxS
 add wave -position insertpoint  \
 sim:/testsystem/S/rest \
 sim:/testsystem/S/search
-run 200 ns
-# End time: 16:55:34 on Mar 15,2026, Elapsed time: 0:04:18
-# Errors: 0, Warnings: 2
+run 500 ns
